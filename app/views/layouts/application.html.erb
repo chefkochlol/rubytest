@@ -16,12 +16,17 @@
     </header>
     <section class="content">
       <nav class="side_nav">
+        <p>
         <span class="time-info"><%= Time.now.asctime %></span>
+        </p>
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/questions">Questions</a></li>
           <li><a href="/news">News</a></li>
           <li><a href="/contact">Contact</a></li>
+          <p>
+          <span class="counter"><%= "You have visited #{pluralize(session[:counter], 'time')}" %></span>
+          </p>
         </ul>
       </nav>
 
