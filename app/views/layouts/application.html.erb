@@ -16,6 +16,12 @@
     </header>
     <section class="content">
       <nav class="side_nav">
+        <% if @cart %>
+
+        <div id="cart" class="carts">
+          <%= render @cart %>
+        </div>
+        <% end %>
         <p>
         <span class="time-info"><%= Time.now.asctime %></span>
         </p>
